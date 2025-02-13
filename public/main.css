@@ -1,0 +1,19 @@
+
+@import 'banner.css';
+@import 'animations.css';
+@import 'tooltip.css';
+
+
+
+
+body {
+  zoom: 0.8;
+  background-image: url('/pixelcut-export (1).jpeg');
+  background-size: 40em 40em;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  
+  z-index: -50;
+}

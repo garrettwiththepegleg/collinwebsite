@@ -1,0 +1,75 @@
+
+#instruction-box {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    color: #ffffff; /* White text color for better contrast */
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    
+    
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+    position: absolute; /* Use absolute positioning */
+    top: 210px; /* Adjust this value to move it up or down */
+    left: 10px; 
+    height: 150px;
+    width: 600px;
+  }
+  #instruction-box:hover {
+    transform: translateY(-5px); /* Slightly lift the box on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  
+  #instruction-box p {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    margin-top: 1px;
+   
+  }
+  
+  #instruction-box ol {
+    padding-left: 20px; /* Add padding to the list */
+  }
+  
+  #instruction-box li {
+    margin-bottom: 1px; /* Add space between list items */
+  }
+  
+  
+  #faq-box {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+    color: #ffffff; /* White text color for better contrast */
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    
+    
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+    position: absolute; /* Use absolute positioning */
+    top: 210px; /* Adjust this value to move it up or down */
+    left: 1260px; 
+    height: 150px;
+    width: 600px;
+  }
+  #faq-box:hover {
+    transform: translateY(-5px); /* Slightly lift the box on hover */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  
+  #faq-box p {
+    font-size: 2.5rem; /* Larger font size for the heading */
+    margin-top: 1px;
+   
+  }
+  
+  #faq-box ol {
+    padding-left: 20px; /* Add padding to the list */
+  }
+  
+  #faq-box li {
+    margin-bottom: 1px; /* Add space between list items */
+  }

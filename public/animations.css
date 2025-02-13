@@ -1,0 +1,86 @@
+
+
+@keyframes rotateColors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+@keyframes rotate {
+    100% {
+      transform: translate(-50%, -50%) rotate(450deg);
+    }
+  }
+  
+  @keyframes leftright {
+    0% {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  
+    49% {
+      transform: translate(250px, 0px);
+      opacity: 0;
+    }
+    80% {
+      transform: translate(-40px, 0px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes galaxy_star_move {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-135rem);
+    }
+  }
+  
+  @keyframes galaxy_star_rotate {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0);
+    }
+  }
+  
+  @keyframes galaxy_gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes galaxy_pulse {
+    0% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+      transform: scale(0.75);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }

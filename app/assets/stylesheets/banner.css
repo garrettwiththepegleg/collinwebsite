@@ -1,0 +1,44 @@
+/* Container for the banner */
+.banner-container {
+    background-image: url('/baseball (1).png'); /* Replace with your image path */
+    background-size: 200% auto; /* Stretch the image to cover the entire banner */
+    background-position: center; /* Center the image */
+    position: relative;
+    width: 100%; /* Ensure the banner spans the full width */
+    height: 200px; /* Adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure the rotating effect doesnt overflow */
+    padding: 5px; /* Add some padding for the border effect */
+  }
+  
+  /* Rotating gradient border */
+  .banner-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Place it above the banner image */
+    background: linear-gradient(30deg, #ff0000, #0a59a0, #ff0000, #0a59a0);
+    background-size: 400% 400%; /* Larger background for smooth animation */
+    animation: rotateColors 5s linear infinite; /* Animation */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); /* Create a mask for the border */
+    -webkit-mask-composite: xor; /* For WebKit browsers */
+    mask-composite: exclude; /* For other browsers */
+    padding: 5px; /* Match the padding of the banner container */
+  }
+  
+ 
+  
+  /* Ensure the heading is centered and above the gradient */
+  .banner-container h1 {
+    position: relative;
+    z-index: 2; /* Place it above the gradient */
+    color: white; /* Adjust text color as needed */
+    font-size: 3rem; /* Adjust font size as needed */
+    text-align: center;
+  }

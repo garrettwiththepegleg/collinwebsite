@@ -1,0 +1,69 @@
+
+/* Headshots Container */
+.headshots-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  /* Individual Headshot */
+  .headshot {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Headshot Wrapper */
+  .headshot-wrapper {
+    position: relative;
+    width: 150px; /* Set the size of the circle */
+    height: 150px; /* Set the size of the circle */
+  }
+  
+  /* Circular Headshot Images */
+  .headshot-wrapper img {
+    width: 100%; /* Ensure the image fills the circle */
+    height: 150%; /* Ensure the image fills the circle */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image covers the circle without stretching */
+    border: 2px solid #00BFFF; /* Optional: Add a border */
+    position: absolute; /* Position the images absolutely within the wrapper */
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for hiding/showing */
+  }
+  
+  /* Hide the second headshot initially */
+  .headshot-wrapper img.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+    /* Charts Container */
+    
+  
+    .player-charts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .chart-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+  
+    .chart-container canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+  
+    .chart-container canvas.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  

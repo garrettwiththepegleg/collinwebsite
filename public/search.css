@@ -1,0 +1,297 @@
+
+/* Wrapper styling */
+.search-wrapper {
+    position: relative;    /* Establishes a positioning context for the pseudo-element */
+    display: inline-block; /* Adjusts the wrapper to fit the content */
+}
+
+
+
+/* Pseudo-element for the outline */
+.search-wrapper::after {
+    content: '';
+    position: absolute;
+    top: -2px;             /* Adjusts the position to create the outline effect */
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    border-radius: 10px;
+    border: 8px solid black;
+    pointer-events: none;  /* Allows clicks to pass through to the input */
+    z-index: -10;            /* Places the outline behind the input if needed */
+}
+.white,
+.border,
+.darkBorderBg,
+.glow {
+  max-height: 70px;
+  max-width: 1014px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1;
+  /* Border Radius */
+  border-radius: 12px;
+  filter: blur(0px);
+}
+
+.input {
+  background-color: #FFFFFF;
+  font-family: 'Inter', sans-serif; 
+  /* padding:7px; */
+  width: 500px;
+  height: 156px;
+  border-radius: 10px;
+  color: black;
+  padding-inline: 59px;
+  font-size: 32px;
+}
+
+#poda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  width: 700px;
+  margin-left: 600px;
+}
+
+.input::placeholder {
+  color: #c0b9c0;
+}
+
+.input:focus {
+  outline: none;
+}
+
+#main:focus-within > #input-mask {
+  display: none;
+}
+
+#input-mask {
+  pointer-events: none;
+  width: 500px;
+  height: 20px;
+  position: absolute;
+  top: 18px;
+  left: 70px;
+}
+
+#pink-mask {
+  pointer-events: none;
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  background: #ff0000; /* Changed from #cf30aa to red */
+  top: 10px;
+  left: 5px;
+  filter: blur(20px);
+  opacity: 0.8;
+  animation:leftright 4s ease-in infinite;
+  transition: all 2s;
+}
+
+#main:hover > #pink-mask {
+  animation: rotate 4s linear infinite;
+  opacity: 0;
+}
+
+.white {
+  max-height: 63px;
+  max-width: 307px;
+  border-radius: 10px;
+  filter: blur(0px);
+}
+
+
+.border {
+  max-height: 59px;
+  max-width: 303px;
+  border-radius: 11px;
+  filter: blur(0px);
+}
+
+
+.darkBorderBg {
+  max-height: 175px;
+  max-width: 522px;
+}
+
+.darkBorderBg::before {
+  content: "";
+
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: brightness(1.35);
+  background-image: conic-gradient(
+    rgba(0, 0, 0, 0),
+    #18116a,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 50%,
+    #cc0000,
+    rgba(0, 0, 0, 0) 100%
+  );
+  animation: rotate 4s linear infinite;
+
+}
+
+#poda:hover > .darkBorderBg::before {
+  transform: translate(-50%, -50%) rotate(262deg);
+}
+
+#poda:hover > .glow::before {
+  transform: translate(-50%, -50%) rotate(240deg);
+}
+
+#poda:hover > .white::before {
+  transform: translate(-50%, -50%) rotate(263deg);
+}
+
+#poda:hover > .border::before {
+  transform: translate(-50%, -50%) rotate(250deg);
+}
+
+#poda:hover > .darkBorderBg::before {
+  transform: translate(-50%, -50%) rotate(-98deg);
+}
+
+#poda:hover > .glow::before {
+  transform: translate(-50%, -50%) rotate(-120deg);
+}
+
+#poda:hover > .white::before {
+  transform: translate(-50%, -50%) rotate(-97deg);
+}
+
+#poda:hover > .border::before {
+  transform: translate(-50%, -50%) rotate(-110deg);
+}
+
+#poda:focus-within > .darkBorderBg::before {
+  transform: translate(-50%, -50%) rotate(442deg);
+  transition: all 4s;
+}
+
+#poda:focus-within > .glow::before {
+  transform: translate(-50%, -50%) rotate(420deg);
+  transition: all 4s;
+}
+
+#poda:focus-within > .white::before {
+  transform: translate(-50%, -50%) rotate(443deg);
+  transition: all 4s;
+}
+
+#poda:focus-within > .border::before {
+  transform: translate(-50%, -50%) rotate(430deg);
+  transition: all 4s;
+}
+
+.glow {
+  overflow: hidden;
+  filter: blur(0px);
+  opacity: 0.4;
+  max-height: 130px;
+  max-width: 354px;
+}
+
+.glow:before {
+  content: "";
+  z-index: -2;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(60deg);
+  position: absolute;
+  width: 999px;
+  height: 999px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /*border color, change middle color*/
+  background-image: conic-gradient(
+    #000,
+    #402fb5 5%,
+    #000 38%,
+    #000 50%,
+    #ff0000, /* Changed from #cf30aa to red */
+    #000 87%
+  );
+  /* change speed here */
+  animation: rotate 4s 0.3s linear infinite;
+  transition: all 2s;
+}
+
+
+
+#filter-icon {
+  position: absolute;
+  top: 30px;
+  right: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  max-height: 100px;
+  max-width: 97px;
+  height: 100%;
+  width: 100%;
+
+  isolation: isolate;
+  overflow: hidden;
+  /* Border Radius */
+  border-radius: 10px;
+  background: white;
+  border: 1px solid transparent;
+}
+
+.filterBorder {
+  height: 105px;
+  width: 105px;
+  position: absolute;
+  overflow: hidden;
+  top: 29px;
+  right: 7px;
+  border-radius: 10px;
+}
+
+.filterBorder::before {
+  content: "";
+
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  filter: brightness(1.35);
+  background-image: conic-gradient(
+    rgba(0, 0, 0, 0),
+    #3d3a4f,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 50%,
+    #3d3a4f,
+    rgba(0, 0, 0, 0) 100%
+  );
+  animation: rotate 4s linear infinite;
+}
+
+#main {
+  position: relative;
+}
+
+#search-icon {
+  position: absolute;
+  left: 20px;
+  top: 60px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome Page</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Rails App</h1>
+    <nav>
+      <ul>
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'About', root_path %></li>
+        <li><%= link_to 'Contact', root_path %></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>This is a boilerplate view page for a Ruby on Rails project.</p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li>Responsive Design</li>
+        <li>Easy to Customize</li>
+        <li>Integrated with Rails Asset Pipeline</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <%= Time.now.year %> My Rails App. All rights reserved.</p>
+  </footer>
+</body>
+</html>

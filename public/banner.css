@@ -1,0 +1,64 @@
+
+
+.banner-container {
+  background-image: url('/baseball (1).png');
+  background-size: 200% auto;
+  background-position: center;
+  position: relative;
+  width: 100px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.banner-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background: linear-gradient(30deg, #ff0000, #0a59a0, #ff0000, #0a59a0);
+  background-size: 400% 400%;
+  animation: rotateColors 5s linear infinite;
+  border-radius: 10px;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  padding: 5px;
+}
+
+.banner-container h1 {
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.banner {
+  background-image: url('/baseball (1).png');
+  background-size: 200% auto;
+  background-position: center;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-family: Arial, sans-serif;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 200px;
+    font-size: 2rem;
+  }
+}
