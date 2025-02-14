@@ -24,7 +24,7 @@ ENV RAILS_ENV="production" \
     BUNDLE_DEPLOYMENT="1" \
     BUNDLE_PATH="/usr/local/bundle" \
     BUNDLE_WITHOUT="development"
-ENV RAILS_MASTER_KEY=c52fb6b713f58bcf4ab689ce6a31077a833ad7055eb99751d3a73bb7ae9ed49f25bf60ef618f313c41025c03c64291fbf7480107c9e28bacc8356f691aba7c7b
+ENV RAILS_MASTER_KEY=b'\xae\xb8{>\xd0@\xa5c\xe3\xe7\xb9\x81\x1b$\xbc\xcf'
 RUN apt-get update && apt-get install -y libyaml-dev
 # Throw-away build stage to reduce size of final image
 FROM base AS build
