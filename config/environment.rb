@@ -18,6 +18,7 @@ cipher.encrypt
 cipher.key = @secret
 
 
-
+puts "Key length: #{@secret.bytesize}"
+puts "Key: #{@secret.inspect}"
 # Initialize the Rails application.
 Rails.application.initialize!
