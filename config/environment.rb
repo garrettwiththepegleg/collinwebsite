@@ -3,7 +3,7 @@ require 'base64'
 require 'openssl'
 
 # Fetch the base64-encoded key from the environment variable
-base64_key = ENV['SECRET_KEY_BASE64']
+
 
 # Check if the environment variable is set
 if base64_key.nil? || base64_key.empty?
