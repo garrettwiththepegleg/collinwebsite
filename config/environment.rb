@@ -10,12 +10,12 @@ require 'base64'
 require 'openssl'
 
 # Base64-encoded key
-base64_key = "rrh7PtBApWPj57=="
+base64_key = "rrh7PtBApWPj57blablard=="
 
 # Decode the base64 string to get the original 16-byte key
 @secret = Base64.decode64(base64_key)
 
-
+puts @secret.bytesize
 
 
 
