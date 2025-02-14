@@ -6,7 +6,14 @@ require 'openssl'
 
 
 # Check if the environment variable is set
-@secret = "rrh7PtBApWPj57=="
+require 'base64'
+require 'openssl'
+
+# Base64-encoded key
+base64_key = "rrh7PtBApWPj57=="
+
+# Decode the base64 string to get the original 16-byte key
+@secret = Base64.decode64(base64_key)
 
 
 
