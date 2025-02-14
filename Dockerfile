@@ -25,7 +25,7 @@ ENV RAILS_ENV="production" \
     BUNDLE_PATH="/usr/local/bundle" \
     BUNDLE_WITHOUT="development"
 ENV RAILS_MASTER_KEY=["fc15926d3e49b7f5f2f040e2bd4987c4"]
-RUN SECRET_KEY_BASE=["fc15926d3e49b7f5f2f040e2bd4987c4"] ./bin/rails assets:precompile
+RUN SECRET_KEY_BASE=["fc15926d3e49b7f5f2f040e2bd4987c4"] rails assets:precompile
 RUN apt-get update && apt-get install -y libyaml-dev
 # Throw-away build stage to reduce size of final image
 FROM base AS build
