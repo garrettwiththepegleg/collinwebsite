@@ -6,6 +6,10 @@ require 'openssl'
 
 
 # Check if the environment variable is set
+@secret = "rrh7PtBApWPj57=="
+
+
+
 
 
 # Initialize the cipher with the key
