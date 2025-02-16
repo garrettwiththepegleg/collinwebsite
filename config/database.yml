@@ -26,7 +26,6 @@ test:
 production:
   primary:
     <<: *default
-    url: <%= ENV ["DATABASE_URL"] %>
     database: storage/production.sqlite3
   cache:
     <<: *default
